@@ -1,4 +1,6 @@
-# flask-quickstart v1.1.0
+# flask-quickstart
+**[v1.1.0](https://github.com/bittobennichan/flask-quickstart/blob/master/CHANGES)**
+
 **flask-quickstart** is a minimal boilerplate/template for starting your new Flask project.
 
 The good thing about *flask-quickstart* is that it does not assume that you are using any Flask extensions. It sets up your project layout, main *Blueprint*, configuration and then gets out of your way!
@@ -76,7 +78,7 @@ When you clone the repo, you'll notice that you will be missing the *config.py* 
 This is b'coz it should be set to be ignored in the *.gitignore* file. Infact everything except *example_config.py* is set to be ignored. This is where you will store the deployment/production configuration values. You don't want to accidently push this to Github. Rename the file to *config.py* after you clone the repo.
 
 
-If available, the values in `flask-quickstart/instance/config.py` will override any config values set in `flask-quickstart/config.py` when environment is set to `production` ( it is set to `development` by default ).
+If available, the values in `flask-quickstart/instance/config.py` will override any config values set in tthe environment form `flask-quickstart/config.py` when environment is set to `production` (it is set to `development` by default).
 
 The **wsgi.py** file uses `production` as the environment. This file is to be used by WSGI servers such as Gunicorn.
 
@@ -108,5 +110,5 @@ You can  extend `manage.py` to support additional commands, parameters etc.
 
 ## Developing your application
 
-*flask-quickstart* is built in such a way that you can easily integrate extensions, , tests etc. The files are commented to help you out with this.
+*flask-quickstart* is built in such a way that you can easily integrate extensions, Blueprints, tests etc. The files are commented to help you out with this.
 
