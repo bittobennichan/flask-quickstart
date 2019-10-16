@@ -29,7 +29,7 @@ class Production:
 
 class Development:
     DEBUG = True
-    TESTING = True
+    TESTING = False
     ENV = 'development'
     SECRET_KEY = 'development_secret_key'
 
@@ -39,7 +39,19 @@ class Development:
         return
 
 
+class Testing:
+    DEBUG = False
+    TESTING = True
+    ENV = 'testing'
+    SECRET_KEY = 'testing_secret_key'
+
+    @staticmethod
+    def init_app(app):
+        pass
+
+
 config = {
     'production': Production,
-    'development': Development
+    'development': Development,
+    'testing': Testing
 }

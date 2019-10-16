@@ -1,4 +1,4 @@
-# flask-quickstart
+# flask-quickstart v1.1.0
 **flask-quickstart** is a minimal boilerplate/template for starting your new Flask project.
 
 The good thing about *flask-quickstart* is that it does not assume that you are using any Flask extensions. It sets up your project layout, main *Blueprint*, configuration and then gets out of your way!
@@ -56,33 +56,29 @@ flask-quickstart/
 ├── config.py
 ├── instance/
 │   └── config.py
+├── LICENSE
 ├── manage.py
 ├── README.md
 ├── requirements.txt
 ├── tests/
+│   ├── __init__.py
+│   └── test_main.py
 └── wsgi.py
 ```
 
-When you clone the repo, you'll notice that you will be missing the instance folder.
+When you clone the repo, you'll notice that you will be missing the *config.py* file in instance folder. You will find an *example_config.py* file instead.
 
 ```
 ├── instance/
-    └── config.py
+    └── example_config.py
 ```
 
-This is b'coz it is set to be ignored in the *.gitignore* file. This is where you will store the deployment / production configuration values. You don't want to accidently push this to Github.
+This is b'coz it should be set to be ignored in the *.gitignore* file. Infact everything except *example_config.py* is set to be ignored. This is where you will store the deployment/production configuration values. You don't want to accidently push this to Github. Rename the file to *config.py* after you clone the repo.
 
- You will have to manually create the instance folder and the *config.py* file inside it. 
- 
- A sample config.py file
 
-```
- # Production config file
-SECRET_KEY = "my_super_secret_production_key"
-```
-If available the values in `flask-quickstart/instance/config.py` will override any config values set in `flask-quickstart/config.py` when environment is set to `production` ( it is set to `development` by default ).
+If available, the values in `flask-quickstart/instance/config.py` will override any config values set in `flask-quickstart/config.py` when environment is set to `production` ( it is set to `development` by default ).
 
-The `wsgi.py` file uses `production` as the environment. This file is to be used by WSGI servers such as Gunicorn.
+The **wsgi.py** file uses `production` as the environment. This file is to be used by WSGI servers such as Gunicorn.
 
 You can also test production environment using `manage.py`
 
@@ -92,11 +88,11 @@ $ python manage.py runserver --env production
 
 ## manage.py
 
-As metioned earlier, `manage.py` has just one command `runserver` which is used to run the Flask development server.
+As mentioned earlier, **manage.py** has just one command **runserver** which is used to run the Flask development server.
 
 It takes two optional parameters
 
-- `env` - Environment to use while running server. Supports  `production` and `development` out of the box. Default is `development`. 
+- `env` - Environment to use while running server. Supports  `production`, `development` and `testing` out of the box. Default is `development`. 
 
 - `port` - Port to use while running server. Default is 5000.
 
@@ -112,5 +108,5 @@ You can  extend `manage.py` to support additional commands, parameters etc.
 
 ## Developing your application
 
-*flask-quickstart* is built in such a way that you can easily integrate extensions, Blueprints etc. The files are commented to help you out with this.
+*flask-quickstart* is built in such a way that you can easily integrate extensions, , tests etc. The files are commented to help you out with this.
 

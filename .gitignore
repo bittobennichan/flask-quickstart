@@ -62,7 +62,9 @@ db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
-instance/
+# Ignore all except example_config.py
+instance/*
+!instance/example_config.py
 .webassets-cache
 
 # Scrapy stuff:
