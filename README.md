@@ -1,5 +1,5 @@
 # flask-quickstart
-**[v1.1.0](https://github.com/bittobennichan/flask-quickstart/blob/master/CHANGES)**
+**[v1.1.2](https://github.com/bittobennichan/flask-quickstart/blob/master/CHANGES)**
 
 **flask-quickstart** is a minimal boilerplate/template for starting your new Flask project.
 
@@ -86,7 +86,9 @@ You can also test production environment using `manage.py`
 
 ```
 $ python manage.py runserver --env production
-``` 
+```
+
+You'll find that there are `.gitkeep` files in some folders. Git does not track empty folders. This is a convention used to preserve the folder structure. These files are not necessary and you can delete them if you want.
 
 ## manage.py
 
